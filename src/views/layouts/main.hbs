@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadIT</title>
+    <meta name="description" content="ReadIT | Connect with anyone, from anywhere." />
+    <link rel=" canonical " href="" />
+    <meta property="og:locale " content="en_US " />
+    <meta property="og:type " content="website " />
+    <meta property="og:title " content="ReadIT | Connect with anyone, from anywhere. " />
+    <meta property="og:description "
+        content="Connect with everyone on the pixel world until you go out on the real world. " />
+    <meta property="og:url " content=" " />
+    <meta property="og:site_name " content="ReadIT" />
+    <meta property="og:image " content="" />
+    <meta property="og:image:width " content="" />
+    <meta property="og:image:height " content="" />
+    <link rel="icon" href="image/6dots3.png" type="image/x-icon">
+    <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css ">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet " href="css/_theme.css">
+    <link rel="stylesheet " href="css/navbar_style.css">
+    <link rel="stylesheet " href="css/profile.css">
+    <link rel="stylesheet " href="css/posts.css">
+</head>
+
+
+<body id="page-template-login ">
+
+    <section id="header" class="header">
+
+        <section class="header">
+
+            <header>
+
+                <nav class="nav">
+
+                    <div class="container-fluid">
+
+                        <!-- head -->
+
+                        <div class="head row">
+
+                            <div class="logo col-3">
+                                <!-- <img src="image/logo.png" alt="formumpic"> -->
+
+                                <div class="logo2">
+
+                                    <label for="headname" class="headname mx-3"><a href="/"><img src="image/6dots3.png"
+                                                alt=""> <span class="d-lg-inline d-none">ReadIT</span> </a></label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="search col-6 my-3 row">
+                                <img src="image/search_pic.png" alt="searchbar" class=" searchBtn p-1">
+                                <form method="GET" action="/search" id="searchBar"><input type="search" name="search"
+                                        class="searchbar " id="searchbar" placeholder="Search..."><input type="submit"
+                                        style="display:none" /></form>
+
+                            </div>
+
+                            <!-- <label for="username" class="username">nickname</label> -->
+
+                            <!-- <label for="username" class="username">nickname</label> -->
+
+                            <div class="dropdown col-3 my-auto">
+
+                                {{#if loggedin}}
+
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-user"></i>
+                                    {{loggedin}}
+                                </button>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="profile">View profile</a>
+                                    <a class="dropdown-item" href="contact-us">Contact us</a>
+                                    <a class="dropdown-item" href="logout" style="color: red;">Logout</a>
+                                </div>
+
+                                {{else}}
+
+                                <button class="btn btn-secondary" type="button" onclick="location.href='login'">
+                                    Login/Signup
+                                </button>
+
+                                {{/if}}
+
+                            </div>
+
+                        </div>
+                </nav>
+
+            </header>
+
+        </section>
+
+
+        {{{body}}}
+
+
+        <!--CREATE NEW POST-->
+        <div class="new-post"><i class="fas fa-plus"></i></div>
+
+        <div class="overlay">
+
+            <div class="add-post">
+
+                <div class="close"><i class="fas fa-times"></i></div>
+
+                <div class="icon"><i class="fas fa-plus"></i></div>
+
+                <h3 class="mb-1">Create a new Post!</h3>
+                <form action="/createPost" method="POST" class="mt-4">
+
+                    <div class="mt-2 mx-auto">
+                        <select class="form-control w-50 mx-auto" name="post_category" id="exampleFormControlSelect1">
+                            <option value="" selected disabled>Choose Category</option>
+                            {{#each a_categories}}
+                            <option value="{{this.id}}">{{this.categoryName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="mx-5 my-1">
+                        <input class="w-100" type="text" name="title" placeholder="Post title">
+                        <textarea id="c_posts" class="w-100" name="c_posts" rows="3" cols="30"
+                            placeholder="Write your post..."></textarea>
+
+                        <button class="btn btn-secondary btn-lg btn-block">Create Post</button>
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js "></script>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+        <script src="js/code.js "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<div class="body row">
+    <div class="col-4 my-auto text-center">
+        {{!-- <img src="image/profile-pic.png" alt="" class="profile-pic"> --}}
+        <img src="image/profilePics/tinyRick.jpeg" alt="" class="profile-pic">
+    </div>
+
+    <div class="info-table col-12 col-sm-8 text-left d-flex">
+        <div class="my-0">
+            <form action="/changeProfile" method="POST">
+                <div>
+                    <span class="that that1">Username:</span> <input type="text" class="that" name="username"
+                        value="{{user.[0].username}}" required>
+                    <span class="thatBtn"><button><i class="fas fa-cog"></i></i></button></span>
+                </div>
+            </form>
+            <form action="/changeProfile" method="POST">
+                <div>
+                    <span class="that that1">Firstname:</span> <input type="text" class="that" name="fname"
+                        value="{{user.[0].firstName}}" required>
+                    <span class="thatBtn"><button><i class="fas fa-cog"></i></i></button></span>
+                </div>
+            </form>
+            <form action="/changeProfile" method="POST">
+                <div>
+                    <span class="that that1">Lastname:</span> <input type="text" class="that" name="lname"
+                        value="{{user.[0].lastName}}" required>
+                    <span class="thatBtn"><button><i class="fas fa-cog"></i></i></button></span>
+                </div>
+            </form>
+            <form action="/changeProfile" method="POST">
+                <div>
+                    <span class="that that1">Email:</span> <input type="text" class="that" name="email"
+                        value="{{user.[0].email}}" style="width: 241px!important;" required>
+                    <span class="thatBtn"><button><i class="fas fa-cog"></i></i></button></span>
+                </div>
+            </form>
+            <form action="/changeProfile" method="POST">
+                <div>
+                    <span class="that that1">Password:</span> <input type="password" class="that" name="password"
+                        value="" required>
+                    <span class="thatBtn"><button><i class="fas fa-cog"></i></i></button></span>
+                </div>
+            </form>
+
+            <div>
+                <span class="that that1">Posts:</span> <span class="that">{{posts.[0].postCount}}</span>
+            </div>
+            <div>
+                <span class="that that1">Subscribed:</span> <span class="that">{{subscriptions.[0].subs}}</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--
+<div>
+    <div class="bodyBody">
+        <div class="chooseBtn mx-5" style="text-align: center;">
+            <span class="bodyBody-subs m-5">Posts ({{posts.[0].postCount}})</span>
+            <span class="bodyBody-subs m-5">Subscribed ({{subscriptions.[0].subs}})</span>
+
+        </div>
+    </div>
+</div>
+-->

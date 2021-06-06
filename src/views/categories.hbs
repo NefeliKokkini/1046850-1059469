@@ -1,0 +1,77 @@
+<link rel="stylesheet " href="css/categories_style.css">
+
+<div class="body row">
+    <div class="left-body col-12 col-xl-2">
+
+        <div class="mx-4 mt-4">
+            <label for="categorie">Categories</label>
+        </div>
+
+        <div class="mx-2 my-0">
+            <ul class="categ-list col-12">
+                {{#each categories}}
+                <li>
+                    <input type="checkbox" id="categ-check" class="{{this.categoryName}}">
+                    <label for="name1">{{this.categoryName}}</label>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
+
+
+        <div class="mx-4">
+            <input type="checkbox">
+            <label for="sub"> Subscribed</label>
+        </div>
+
+        <div class="mx-2 my-2">
+            <input class="createdBy" id="createdBy" type="text" placeholder="Created by...">
+        </div>
+
+        <div class="dropdownBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </div>
+
+    <div class="right-body col-12 col-xl-10">
+        <div class="upper-body row">
+            <div class="upper-body-dom col-12 row">
+                <div class="col-9 col-sm-6 text-right">
+                    <label for="categ-h1" class="m-3 px-4">Categories</label>
+                </div>
+                <div class="reqNewCat col-6 d-sm-block d-none">
+                    <button class="mt-5"> + Request New Categorie</button>
+                </div>
+                <div class="reqNewCat col-2 d-sm-none d-block">
+                    <button class="my-5"> + </button>
+                </div>
+                <select name="choose-by" class="choose-by mx-4" style="display: none;">
+                    <option value="all">All</option>
+                    <option value="posts">By posts</option>
+                    <option value="alpha">Alphabetically</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="main-body row px-4">
+            <ul class="allTheCatBoxes row">
+                {{#each categories}}
+                <a href="/category?id={{this.id}}">
+                    <li>
+                        <div>
+                            <label for="">Categorie: {{this.categoryName}}</label><br>
+                            <label for=""> Created by: {{this.username}}</label><br>
+                            <label for="">Posts: {{this.posts}}</label><br>
+                            <label for="">Subscribed: {{this.subscriptions}}</label>
+                        </div>
+                    </li>
+                </a>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/category.js "></script>

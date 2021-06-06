@@ -1,0 +1,32 @@
+{
+  "name": "readit",
+  "version": "1.0.0",
+  "description": "A forum application made with Node.JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NefeliKokkini/NODE-NEFELI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NefeliKokkini/NODE-NEFELI/issues"
+  },
+  "homepage": "https://github.com/NefeliKokkini/NODE-NEFELI#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "hbs": "^4.1.2",
+    "localtunnel": "^2.0.1",
+    "mysql": "^2.18.1",
+    "pm2": "^4.5.6",
+    "process": "^0.11.10"
+  }
+}

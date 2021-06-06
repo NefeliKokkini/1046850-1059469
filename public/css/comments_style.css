@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/* ----------categorie name ------------ */
+
+.categorie-name h1{
+    background: rgba(0, 0, 0, .6);
+
+    color: white;
+    border-radius: 0.2em;
+    display: inline-block;
+}
+
+.categorie-name .backBtn button{
+    padding: 0.3em 2em;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.1rem;
+
+}
+
+.categorie-name button:hover{
+    background: rgb(236, 86, 86);
+    box-shadow: 1px 2px black;
+
+}
+
+.categorie-name a{
+    text-decoration: none;
+}
+
+/* ----------categorie information ------------ */
+
+
+
+.categorie-info .ci_box {
+    
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    border-radius: 0.9rem;
+    
+}
+
+
+
+/* ----------posts ------------ */
+
+.posts{
+    color: white;
+}
+
+.posts div{
+    background-color:rgba(0, 0, 0, .6);
+    border-radius: 6px;
+}
+
+.posts div p{
+    min-height: 5em;
+}
+
+.posts div label:first-child{
+    padding: 0.2em 1.5em 0.2em 0.5em;
+    background: #FF4242;
+    border-radius: 6px;
+}
+
+.posts div button{
+    padding: 0.2em 2em;
+    background: #FF4242;
+    border-radius: 6px;
+    color: white;
+}
+
+.categorie-name button{
+    padding: 0.2em 2em;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 4px;
+    color: white;
+}
+
+/* -------comments---------- */
+
+.post_comment{
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+
+    border-radius: 6px;
+}
+
+.txtArea{
+    resize: none;
+    flex-grow:1;
+    
+    padding: 0.1em 0.3em;
+    font-size: 1.2em;
+    border:0px;
+    outline: none;
+    border-radius: 0.4em 0em 0em 0.4em;
+
+
+}
+.txtAreaBtn{
+    background: white;
+    padding: 0em 0.2em;
+    margin: 0em 0em 0em 0.3em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    outline: none;
+}
+
+.txtAreaBtn:hover{
+    background: rgb(236, 86, 86);
+    color: white;
+    box-shadow: 1px 2px black;
+}
+
+
+.the_comment{
+    
+    background: rgba(0, 0, 0, .6);
+    
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.the_comment  p{
+    min-height: 1.5em;
+}
+
+.the_comment  label:first-child{
+    padding: 0.2em 1.5em 0.2em 0.5em;
+    background: #FF4242;
+    border-radius: 6px;
+}
+
+.comment_box ul{
+    list-style-type: none;
+  
+}
+
+.comment_box ul button{
+    padding: 0.2em 2em;
+    background: #FF4242;
+    border-radius: 6px;
+    color: white;
+}
+
+
+
+

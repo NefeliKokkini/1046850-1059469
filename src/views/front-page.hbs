@@ -1,0 +1,109 @@
+<link rel="stylesheet " href="css/posts_style.css">
+
+<section id="main" class="main">
+    <div class="container mt-5">
+        <section id="trending-posts" class="trending-posts mb-5">
+            <h5 class="trending-title">Trending Posts</h5>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    {{#each trending}}
+
+                    <div class="swiper-slide">
+                        <a href="posts?id={{this.id}}">
+                            <div class="card" style="width: 20rem;">
+                                <label for="name" class="labelName">
+                                    <span>{{this.title}} <small>by</small></span>
+                                    <span><i class="far fa-user-circle m-1"></i>{{this.username}}</span>
+                                </label>
+
+                                <br>
+                                <div class="content">
+                                    <p>{{this.content}}</p>
+                                </div>
+                                <br>
+
+                                <label for="likes" class="likesNumber0 position-absolute" style="bottom: 0;">
+                                    Likes: {{this.likes}} Comments: {{this.comments}}
+                                </label>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    {{/each}}
+
+                </div>
+
+
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+                <!-- Add Arrows -->
+                <div class="swiper-button-next " style="color: black;"></div>
+                <div class="swiper-button-prev " style="color: black;"></div>
+            </div>
+        </section>
+
+        <section id="top-posts" class="mt-5 pt-5">
+            <h5 class="trending-title ml-2">Top Posts</h5>
+            <div class="row p-2">
+                <div class="col-12 col-md-8">
+
+
+                    {{#each top}}
+                    <a href="posts?id={{this.id}}" class="text-decoration-none">
+                        <div class="card mb-2">
+                            <div class="card-header">
+                                {{this.title}} <span> # {{this.categoryName}}</span>
+                            </div>
+                            <div class="card-body">
+                                <p>{{this.content}}</p>
+                                <hr class="border-top border-white">
+                                <div class="text-left float-left">
+                                    <label for="likes" class="likesNumber0">
+                                        Likes: {{this.likes}} | Comments: {{this.comments}}
+                                    </label>
+                                </div>
+                                <div class="text-right float-right">
+                                    <label for="name">
+                                        {{this.username}}
+                                    </label>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </a>
+
+                    {{/each}}
+
+
+                </div>
+
+
+
+                <div class="all-categories col-0 col-md-4 b-1">
+                    <a href="categories">
+                        <h6 class="top-categories">Top categories</h6>
+                    </a>
+                    <div class="category-list">
+                        <ul class="list-group">
+
+                            {{#each categories}}
+                            <a href="/category?id={{this.id}}">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    {{this.categoryName}} <span
+                                        class="badge badge-secondary">{{this.subscriptions}}</span>
+                                </li>
+                            </a>
+
+                            {{/each}}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</section>

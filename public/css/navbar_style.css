@@ -1,0 +1,60 @@
+/* ------------- head ------------*/
+.head{
+    background-color: #FF4242 ;
+    display: flex;
+    z-index: 10;
+
+    position: sticky;
+    top: 0;
+
+}
+.head .logo{
+    color: white;
+    font-size: 2.4em; 
+    
+}
+
+.search img{
+    background: white;
+
+    border-radius:  12% 0% 0% 12%;
+    max-height: 33px;
+}
+.search form{
+    width: 70%;
+}
+.searchbar{
+    max-height: 33px;
+    width: 100%;
+    padding: 0.1em 0.3em;
+    font-size: 1.3em;
+    border-radius: 0px 12px 12px 0px;
+    border:0px;
+    outline: none;
+}
+
+.searchBtn:hover{
+    /* background: rgb(56, 55, 55); */
+    border: 2px solid black;
+}
+
+.dropdown button{
+    background-color: #FF4242;
+    border-radius: 10px;
+    border: 2px solid white;
+    outline: none;
+    min-width: 6rem;
+}
+
+.logo2 label a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.loginBtn a{
+    text-decoration: none;
+    color: white;
+}
+
+  

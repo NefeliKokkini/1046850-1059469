@@ -1,0 +1,87 @@
+<link rel="stylesheet " href="css/posts_style.css">
+
+<!-- The categorie name -->
+<div class="categorie-name text-center row" style="margin:0!important;">
+    <div class="backBtn col-1 col-lg-2 my-5">
+        <a href="categories">
+            <button class="d-lg-inline d-none"><i class="fas fa-arrow-circle-left pr-2"></i>All categories</button>
+            <button class="d-lg-none d-inline col-1"><i class="fas fa-arrow-circle-left pr-2"></i></button>
+        </a>
+    </div>
+    <div class="col-3 col-lg-8 ml-3">
+        <h1 class="my-5 px-5 py-2 ml-5">{{posts.[0].categoryName}}</h1>
+    </div>
+</div>
+
+
+<div class="the_body container-fluid row">
+    <!-- Categorie information -->
+    <div class="col-12  col-xl-4">
+        <div class="categorie-info col-9 ">
+            <div class="ci_box p-5 d-none d-xl-block">
+                <table>
+                    <tr>
+                        <th>Category:</th>
+                        <th>{{posts.[0].categoryName}}</th>
+                    </tr>
+                    <tr>
+                        <th>Posts:</th>
+                        <th>{{posts.[0].posts}}</th>
+                    </tr>
+                    <tr>
+                        <th>Subscribed:</th>
+                        <th>{{posts.[0].subscriptions}}</th>
+                    </tr>
+                </table>
+                <br>
+                <p><strong>More information: </strong> </p>
+                <p>
+                    {{posts.[0].info}}
+                </p>
+
+            </div>
+
+            {{#if subBtn}}
+            <div class="mt-2 ci_btn float-left">
+                <button class="px-5 py-2" onclick="location.href='subscribe?id={{posts.[0].catID}}'"> {{subBtn}}
+                </button>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+
+
+    <!-- post area -->
+    <div class="posts_box col-12 col-xl-5">
+        <form action="/createPost" method="POST">
+            <div class="create_posts p-2">
+                <input class="d-block" type="text" name="title" placeholder="Post title.." required>
+                <div class="d-flex mt-2">
+                    <input type="hidden" value="{{posts.[0].catID}}" name="post_category">
+                    <br>
+                    <textarea id="c_posts" class="txtArea" name="c_posts" rows="2" cols="50"
+                        placeholder="Write your post..." required></textarea>
+                    <button class="txtAreaBtn"> Create Post</button>
+                </div>
+            </div>
+        </form>
+        <!-- the posts -->
+        <div class="posts ">
+            <ul>
+                {{#each posts}}
+                {{#if this.id}}
+                <li id="a0">
+                    <div>
+                        <a href="/posts?id={{this.id}}" class="text-white" style="cursor:pointer;">
+                            <label for="title"><span id="title">{{this.title}} - {{this.username}}</span></label>
+                        </a>
+                        <p>{{this.content}}</p>
+                        <label for="likes" class="likesNumber0">Likes: {{this.likes}} | Comments:
+                            {{this.comments}}</label>
+                        <button class="px-3 py-1 mx-2" onclick="location.href='/posts?id={{this.id}}'">Comment</button>
+                    </div>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>

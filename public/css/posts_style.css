@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+/* ----------categorie name ------------ */
+
+.categorie-name h1{
+    background: rgba(0, 0, 0, .6);
+
+    color: white;
+    border-radius: 0.2em;
+    display: inline-block;
+}
+
+.categorie-name button{
+    padding: 0.3em 2em;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.1rem;
+
+}
+
+.categorie-name button:hover{
+    background: rgb(236, 86, 86);
+    box-shadow: 1px 2px black;
+}
+
+.categorie-name a{
+    text-decoration: none;
+}
+
+/* ----------categorie information ------------ */
+
+.categorie-info .ci_box {
+    
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    border-radius: 10px;
+    
+}
+
+.categorie-info .ci_btn button {
+
+    background-color: rgba(0, 0, 0, .6);
+    outline: none;
+    border-radius: 0.5em;
+    color: white;
+    
+}
+
+.categorie-info .ci_btn button:hover {
+
+    background-color: rgb(236, 86, 86);
+    box-shadow: 1px 2px black;
+}
+
+/* ----------create posts ------------ */
+
+.create_posts{
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+.txtArea{
+    resize: none;
+    flex-grow:1;
+    
+    padding: 0.1em 0.3em;
+    font-size: 1.2em;
+    border:0px;
+    outline: none;
+    border-radius: 0.4em 0em 0em 0.4em;
+    border: 2px solid black;
+
+
+}
+.txtAreaBtn{
+    /* background: rgba(0, 0, 0, .6); */
+    padding: 0em 0.2em;
+    margin: 0em 0em 0em 0.3em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    outline: none;
+    background: white;
+
+
+}
+
+
+.txtAreaBtn:hover{
+    background-color: rgb(236, 86, 86);
+    color: white;
+    box-shadow: 1px 2px black;
+}
+
+
+
+
+/* ----------the posts ------------ */
+
+.posts ul{
+    list-style-type: none;
+    font-size: 1rem;
+}
+
+.posts div{
+    background-color:rgba(0, 0, 0, .6);
+
+    margin: 10px 0px;
+    padding: 15px ;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.posts div p{
+    min-height: 5em;
+}
+
+.posts div label:first-child{
+    padding: 0.3em 2em 0.3rem 1rem;
+    background: #FF4242;
+    border-radius: 0.5rem;
+}
+
+.posts div button{
+    padding: 0.2em 2em;
+    background: #FF4242;
+    border-radius: 6px;
+    color: white;
+}
+
+.posts a {
+
+
+    text-decoration: none;
+    color: initial;
+}

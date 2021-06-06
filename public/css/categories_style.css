@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+  
+/* -------body---------- */
+
+/* ----left body------ */
+.left-body{
+    background: rgba(0, 0, 0, .6);
+
+    height: 55em;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.left-body div:nth-child(1){
+    font-size: 1.7em;
+    color: white;
+}
+
+.left-body div:nth-child(3){
+    font-size: 1.5em;
+    color: white;
+}
+
+.left-body div:nth-child(3) input{
+    transform: scale(1.2);
+
+}
+
+.left-body div:nth-child(4) input{
+    font-size: 1.1em;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    padding: 0.4rem 0.5rem;
+    width: 90%
+}
+
+.categ-list{
+    width: 12em;
+    
+    font-size: 1.2em;
+    height: 13em;
+    
+    border: 2px solid black;
+    border-radius: 0.3em;
+    background: rgb(61, 61, 61);
+    list-style-type: none;
+    color: white;
+    text-decoration-line: none;
+
+    overflow: auto;
+}
+
+.categ-list li{
+    padding: 0.2em;
+    margin: 0.3em 0em;
+}
+
+.categ-list li:hover{
+    color: rgb(240, 102, 102);
+}
+/* -----upper body---------- */
+.upper-body{
+    background: rgb(180, 180, 180);
+
+}
+
+.upper-body label{
+    font-size: 3em;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 0.3em;
+    
+    color: white;
+}
+
+.upper-body button{
+    margin: 1em 3em;
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background: rgba(0, 0, 0, .6);
+    color: white;
+    outline: none;
+}
+.upper-body button:hover{
+    background: rgb(236, 86, 86);
+}
+
+.upper-body select{
+    border-radius: 0.3em;
+    background: rgba(0, 0, 0, .6);
+    color: white;
+    outline: none;
+}
+
+.main-body ul{
+    list-style-type: none;
+}
+
+.main-body ul li{
+    background: rgba(0, 0, 0, .6);
+    font-size: 1rem;
+    margin: 1em;
+    padding: 1.2em;
+    width: 20rem;
+    height: 15rem;
+    color: white;
+    border: 2px solid black;
+    border-radius: 0.4em;
+}
+
+.main-body{
+    border-top:2px solid black;
+}
+
+.main-body ul li:hover{
+    background: rgb(236, 86, 86);
+    box-shadow: 4px 8px black;
+}
+.dropdownBtn{
+    display: none;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+@media (max-width: 1200px){
+    .left-body{
+        height: auto;
+    }
+    .dropdownBtn{
+        display: block;
+    }
+
+    .left-body div:not(.dropdownBtn){
+        display: none;
+    }
+
+}
